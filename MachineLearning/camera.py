@@ -8,9 +8,9 @@ from sklearn.preprocessing import StandardScaler
 
 #Build a sidebar
 with st.sidebar:
-    #filename = st.file_uploader("Choose your model for prediction")
+    filename = st.file_uploader("Choose your model for prediction")
     #filename = 'Svc_C-15_gamma-001_kernel-rbf.sav'
-    filename = 'Svc_C-15_gamma-001_kernel-rbf-FULLSET.sav'
+    #filename = 'Svc_C-15_gamma-001_kernel-rbf-FULLSET.sav'
     if filename is not None:
         
         loaded_model = joblib.load(filename)
