@@ -1,0 +1,85 @@
+RESULTS: 
+
+
+Validation loss: 1.1530156135559082
+Validation accuracy: 0.654542863368988
+
+
+
+
+
+
+
+
+
+#---------------------------------------------------------------------------
+
+model = Sequential()
+
+# 1st CNN part
+model.add(Input(shape=(48, 48, 1)))
+model.add(Conv2D(64, kernel_size=(3, 3), padding='same', activation='relu'))
+model.add(Conv2D(64, kernel_size=(3, 3), padding='same', activation='relu'))
+model.add(BatchNormalization())
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.3))
+
+# 2nd CNN part
+model.add(Conv2D(64, kernel_size=(3, 3), padding='same', activation='relu'))
+model.add(Conv2D(64, kernel_size=(3, 3), padding='same', activation='relu'))
+model.add(BatchNormalization())
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.3))
+
+# 3rd CNN part
+model.add(Conv2D(128, kernel_size=(3, 3), padding='same', activation='relu'))
+model.add(Conv2D(128, kernel_size=(3, 3), padding='same', activation='relu'))
+model.add(BatchNormalization())
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.3))
+
+# 4th CNN part
+model.add(Conv2D(128, kernel_size=(3, 3), padding='same', activation='relu'))
+model.add(Conv2D(128, kernel_size=(3, 3), padding='same', activation='relu'))
+model.add(BatchNormalization())
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.3))
+
+model.add(Flatten())
+
+# Fully connected part
+model.add(Dense(768,activation='relu', kernel_regularizer=l2(0.01))) # Added L2 regularization , kernel_regularizer=l2(0.01)
+model.add(Dropout(0.3))
+
+# Output layer
+classes = 7
+model.add(Dense(classes, activation='softmax'))
+
+# Compile the model
+model.compile(optimizer=Adam(learning_rate=0.0001), loss='categorical_crossentropy', metrics=['accuracy'])
+
+
+
+# ModelCheckpoint callback to save the best model based on validation accuracy
+checkpoint = ModelCheckpoint(
+                                filepath= "./bestmodel.keras", 
+                                monitor='val_accuracy', 
+                                verbose=print_results, 
+                                save_best_only=True, 
+                                mode='max')
+
+# EarlyStopping callback to stop training when validation loss stops improving
+early = EarlyStopping(
+                            monitor='val_accuracy',    # Besides val_loss, consider monitoring val_accuracy as well.
+                            min_delta=0,
+                            patience=10,
+                            verbose=print_results,
+                            restore_best_weights=True)
+
+# ReduceLROnPlateau callback to reduce the learning rate when validation loss plateaus
+reduce_lr = ReduceLROnPlateau(
+                            monitor='val_accuracy',
+                            factor=0.25,   # 0.7
+                            patience=5,
+                            verbose=print_results,
+                            min_delta=0.0001)

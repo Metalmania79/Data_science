@@ -1,0 +1,32 @@
+rint_results = 1
+
+# ModelCheckpoint callback to save the best model based on validation accuracy
+checkpoint = ModelCheckpoint(
+                                filepath= "./bestmodel.keras", 
+                                monitor='val_accuracy', 
+                                verbose=print_results, 
+                                save_best_only=True, 
+                                mode='max')
+
+# EarlyStopping callback to stop training when validation loss stops improving
+early = EarlyStopping(
+                            monitor='val_loss',    # Besides val_loss, consider monitoring val_accuracy as well.
+                            min_delta=0,
+                            patience=10,
+                            verbose=print_results,
+                            restore_best_weights=True)
+
+# ReduceLROnPlateau callback to reduce the learning rate when validation loss plateaus
+reduce_lr = ReduceLROnPlateau(
+                            monitor='val_loss',
+                            factor=0.5,   # 0.7
+                            patience=5,
+                            verbose=print_results,
+                            min_delta=0.0001)
+
+# List of callbacks
+callbacks_list = [
+                   early, 
+                   checkpoint, 
+                   reduce_lr
+                 ]
