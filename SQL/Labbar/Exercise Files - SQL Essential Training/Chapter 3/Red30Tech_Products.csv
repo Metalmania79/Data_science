@@ -1,0 +1,66 @@
+﻿Category,ProductID,Name,RetailPrice,ManufactureCost,QtyInStock
+eBooks,EB502,Building Your First Robot,24.95,9.48,380
+eBooks,EB503,Building Your Own Drone,24.99,9.50,173
+Drone Kits,DK201,BYOD-100,54.00,20.52,281
+Drone Kits,DK202,BYOD-200,58.95,22.40,438
+Drone Kits,DK203,BYOD-220,69.00,26.22,189
+Drone Kits,DK204,BYOD-300,89.00,33.82,127
+Drone Kits,DK205,BYOD-350,89.95,34.18,334
+Drone Kits,DK206,BYOD-400,119.00,45.22,17
+Drone Kits,DK207,BYOD-400S,129.95,49.38,123
+Drone Kits,DK208,BYOD-500,167.00,63.46,160
+Drone Kits,DK209,BYOD-550,179.00,68.02,409
+Robot Kits,RK602,BYOR-1000,189.00,71.82,493
+Robot Kits,RK603,BYOR-1500,189.00,71.82,275
+Robot Kits,RK604,BYOR-2640S,189.00,71.82,331
+Robot Kits,RK605,BYOR-3000,214.00,81.32,203
+Robot Kits,RK606,BYOR-3535,225.00,85.50,126
+Robot Kits,RK607,BYOR-4005,245.00,93.10,231
+eBooks,EB504,Cartesian Robots,12.99,4.94,312
+Blueprints,BP104,Cat Robot Blueprint,4.99,1.90,2229
+Training Videos,TV803,Cloud Computing,29.99,11.40,436
+Blueprints,BP105,Creature Robot Arms Blueprint ,12.00,4.56,321
+Drones,DS301,DA-SA702 Drone,399.00,151.62,309
+Drones,DS302,DC-304 Drone,395.00,150.10,159
+eBooks,EB505,Delivery Drones,14.99,5.70,429
+eBooks,EB506,Delta Robots,16.99,6.46,428
+eBooks,EB507,Drone Building Essentials,13.99,5.32,79
+Training Videos,TV804,Drone Video Techniques,37.99,14.44,75
+Drones,DS303,DTD-7000 Drone,450.00,171.00,232
+Drones,DS304,DTE-QFN20 Drone,250.00,95.00,302
+Drones,DS305,DTI-84 Drone,455.00,172.90,340
+Drones,DS306,DX-145 Drone,250.00,95.00,80
+eBooks,EB508,Fixed Wing Drones,15.50,5.89,468
+eBooks,EB509,GPS Drones,19.99,7.60,405
+eBooks,EB511,Helicopter Drones,20.95,7.96,6
+Blueprints,BP106,Hexacopter Drone Blueprint,8.99,3.42,334
+Training Videos,TV805,Industrial 3D Printing ,49.00,18.62,252
+Blueprints,BP107,Ladybug Robot Blueprint,12.00,4.56,283
+Training Videos,TV806,Mapping with Drones,49.00,18.62,374
+Robots,RS702,MICR-23K Robot,899.00,341.62,291
+Drones,DS307,MICR-564K Drone,499.00,189.62,133
+eBooks,EB512,Multi Rotor Drones,24.95,9.48,220
+Training Videos,TV807,Open Source Code,32.95,12.52,376
+Blueprints,BP108,Panda Robot Blueprint,7.99,3.04,2276
+eBooks,EB513,Photograph Drones,14.99,5.70,326
+eBooks,EB514,Polar Robots,23.99,9.12,375
+Blueprints,BP109,QuadroCopter Blueprint ,10.99,4.18,53
+Robots,RS703,RCB-889 Robot,549.00,208.62,296
+Robots,RS704,RLK-9920 Robot,699.00,265.62,182
+Training Videos,TV808,Robotic Essentials,34.99,13.30,901
+Robots,RS705,RQTE-554 Robot,684.00,259.92,363
+eBooks,EB516,RTF Drones,16.99,6.46,217
+Robots,RS706,RWW-75 Robot,883.00,335.54,335
+Robots,RS707,RXW-9807 Robot,599.00,227.62,286
+eBooks,EB517,SCARA Robots,19.50,7.41,257
+eBooks,EB518,Single Rotor Drones,14.99,5.70,236
+Blueprints,BP110,Sleepy Eye Blueprint,11.99,4.56,1126
+eBooks,EB519,Spherical Robots,16.75,6.37,470
+Training Videos,TV809,Understanding 3D Printing,42.99,16.34,202
+eBooks,EB520,Understanding Arduino,17.50,6.65,462
+eBooks,EB521,Understanding Artificial Intelligence,19.50,7.41,158
+Training Videos,TV810,Understanding Automation,44.95,17.08,190
+Training Videos,TV811,Understanding Drone Regulations,27.50,10.45,338
+Training Videos,TV812,Understanding Raspberry PI,28.99,11.02,467
+Blueprints,BP111,Upside Down Robot Blueprint,12.00,4.56,8
+Training Videos,TV813,Virtual Reality Basics,29.99,11.40,350

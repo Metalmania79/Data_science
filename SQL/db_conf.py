@@ -1,0 +1,7 @@
+USER = 'sa'
+PASSWORD = 'Jhgblo1!'
+URL = './'
+SERVER = 'METAL'
+HOST = '\SQLEXPRESS'
+DB = 'AdventureWorks2022'
+MSSQL = r'.\SQLEXPRESS'

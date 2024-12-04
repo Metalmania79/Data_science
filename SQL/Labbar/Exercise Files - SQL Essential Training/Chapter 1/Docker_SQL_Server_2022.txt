@@ -1,0 +1,18 @@
+Create a Docker container for SQL Server 2022
+
+
+Windows:
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Adam123456" -p 1401:1433 --name sqlserver2022 -d mcr.microsoft.com/mssql/server:2022-latest
+
+
+MacOS and Linux with Intel processors:
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=Adam123456' -p 1401:1433 --name sqlserver2022 -d mcr.microsoft.com/mssql/server:2022-latest
+
+
+
+Apple Silicon (M1, M2) MacOS:
+	NOTE: There is no SQL Server 2022 image available currently
+	for Apple Silicon processors. This Azure SQL Edge image will work
+	for the course, but it is a slightly different version.
+
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=Adam123456' -p 1401:1433 --name sqlserver -d mcr.microsoft.com/azure-sql-edge
